@@ -1,0 +1,41 @@
+Feature                                             Expected Behavior
+- Line color                                        * When line is parallel to horizontal axis the color is red.
+                                                    * When line is parallel to vertical axis the color is blue.
+                                                    * Else the color is black.
+    
+- Length label                                      * When drawing line label is visible on top of the tool
+                                                    * Correct unit is shown as set by the user
+                                                    * The label updates dynamically as the line length changes
+                                                    * Typing in a number updates the label and the length of the line
+                                                       * From the end of the line we can then draw a new line at any angle.
+
+- Angle label                                       * The angle should be visible as the cursor rotates.
+                                                    * The arc of the angle should be visible.
+                                                    * Both should update dynamically as the cursor moves.
+                                                    * The angle should be measured with respect to the horizontal axis for the first line to be drawn.
+                                                    * If angle snap is enabled 
+                                                        * The angle should change by the snap value.
+                                                        * Range of valid snap angle is 5-90 degrees.
+                                                        * If value is greater than the upper bound use the last valid angle.
+                                                        * If value is less than the lower bound use 5 degrees.
+                                                    * If angle snap is disabled 
+                                                        * angle should change with the precision of 0.1 degree.
+
+- Shape                                             * When all edges are connected the drawing tool exits.
+                                                        * A shape is considered complete when we click anywhere on the very first edge we had drawn.
+                                                        * The point where we click will be the last vertex and remainder of the first edge (outside the vertex) is discarded.
+                                                        * The draw tool exits when the shape is complete.
+
+- snap                                              * parallel and normal snaps should be shown
+
+- 3d                                                * when switching to 3d mode (bottom right) all the existing drawn shapes should convert into their 3d counterpart.
+                                                    * when switching mode draw tool should exit.
+
+- object type                                       * depending on the object type the fill color will be set.
+
+- clicks                                            * single click enter the draw tool.
+                                                    * double click considers the current coordinate as the last vertex and completes the object and exits draw tool.
+
+- escape button                                     * when pressing the escape button, it goes removes the latest vertex and changes line origin to the second-last vertex.
+                                                    * if only one vertex is present then the tool exits.
+                                                    

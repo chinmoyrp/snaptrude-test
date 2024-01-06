@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Playwright tests for snaptrude draw tool",
   "main": "index.js",
-  "scripts": {},
+  "type": "module",
+  "scripts": {
+    "test": "npx playwright test --ui"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chinmoyrp/snaptrude-test.git"

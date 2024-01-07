@@ -36,6 +36,5 @@ Feature                                             Expected Behavior
 - clicks                                            * single click enter the draw tool.
                                                     * double click considers the current coordinate as the last vertex and completes the object and exits draw tool.
 
-- escape button                                     * when pressing the escape button, it goes removes the latest vertex and changes line origin to the second-last vertex.
-                                                    * if only one vertex is present then the tool exits.
+- escape button                                     * pressing the esc key undoes the last line.
                                                     
